@@ -30,7 +30,6 @@ public class BookRest {
     //books/{id} GET
     @GET
     @Path("/{id}")
-    @Produces(MediaType.APPLICATION_JSON)
     public Response getBookById(@PathParam("id") Long id){
         var book = rep.findByIdOptional(id);
         if(book.isEmpty()){
@@ -41,9 +40,6 @@ public class BookRest {
 
     //books POST
     @POST
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
-    @Transactional
     public Response createBook(Book p){
         rep.persist(p);
         return Response.status(Response.Status.CREATED.getStatusCode(), "book created").build();
@@ -52,9 +48,6 @@ public class BookRest {
     //books/{id} PUT
     @PUT
     @Path("/{id}")
-    @Transactional
-    @Consumes(MediaType.APPLICATION_JSON)
-    @Produces(MediaType.APPLICATION_JSON)
     public Response updateBook(@PathParam("id")Long id, Book bookObj){
         Book book = rep.findById(id);
         book.setAuthor(bookObj.getAuthor());
@@ -68,7 +61,6 @@ public class BookRest {
     //books/{id} DELETE
     @DELETE
     @Path("/{id}")
-    @Transactional
     public void deleteBook(@PathParam("id")Long id){
         rep.deleteById(id);
     }
