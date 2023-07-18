@@ -1,27 +1,31 @@
 package com.distribuida.rest;
 
-import com.distribuida.db.Consulta;
-import com.distribuida.rep.ConsultaRepository;
+
+
+
+
+
+import com.distribuida.db.Paciente;
+import com.distribuida.rep.PacienteRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
-
-import java.util.List;
-
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/consultas")
+import java.util.List;
+
+@Path("/pacientes")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
-public class ConsultaRest {
+public class PacienteRest {
 
     @Inject
-    ConsultaRepository rep;
+    PacienteRepository rep;
 
     @GET
-    public List<Consulta> findAll(){
+    public List<Paciente> findAll(){
         return rep.findAll().list();
     }
 
@@ -36,19 +40,25 @@ public class ConsultaRest {
     }
 
     @POST
-    public Response create(Consulta entity){
+    public Response create(Paciente entity){
         rep.persist(entity);
         return Response.status(Response.Status.CREATED.getStatusCode(), "Consulta Created").build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Consulta obj){
-        Consulta tmp = rep.findById(Math.toIntExact(id));
-        tmp.setConcepto_cons(obj.getConcepto_cons());
-        tmp.setFecha_cons(obj.getFecha_cons());
-        tmp.setId_medico_cons(obj.getId_medico_cons());
-        tmp.setId_paciente_cons(obj.getId_paciente_cons());
+    public Response update(@PathParam("id") Long id, Paciente obj){
+        Paciente tmp = rep.findById(Math.toIntExact(id));
+        tmp.setApellido_materno_pac(obj.getApellido_materno_pac());
+        tmp.setCedula_pac(obj.getCedula_pac());
+        tmp.setDomicilio_pac(obj.getDomicilio_pac());
+        tmp.setFecha_nac_pac(obj.getFecha_nac_pac());
+        tmp.setApellido_paterno_pac(obj.getApellido_paterno_pac());
+        tmp.setId_hospitalario_pac(obj.getId_hospitalario_pac());
+        tmp.setNum_expediente_pac(obj.getNum_expediente_pac());
+        tmp.setNombre_pac(obj.getNombre_pac());
+        tmp.setSexo_pac(obj.getSexo_pac());
+        tmp.setTelefono_pac(obj.getTelefono_pac());
         return Response.ok().build();
     }
 

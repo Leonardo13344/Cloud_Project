@@ -1,27 +1,28 @@
 package com.distribuida.rest;
 
-import com.distribuida.db.Consulta;
-import com.distribuida.rep.ConsultaRepository;
+
+
+import com.distribuida.db.Derivacion;
+import com.distribuida.rep.DerivacionRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
-
-import java.util.List;
-
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/consultas")
+import java.util.List;
+
+@Path("/derivaciones")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
-public class ConsultaRest {
+public class DerivacionRest {
 
     @Inject
-    ConsultaRepository rep;
+    DerivacionRepository rep;
 
     @GET
-    public List<Consulta> findAll(){
+    public List<Derivacion> findAll(){
         return rep.findAll().list();
     }
 
@@ -36,19 +37,19 @@ public class ConsultaRest {
     }
 
     @POST
-    public Response create(Consulta entity){
+    public Response create(Derivacion entity){
         rep.persist(entity);
         return Response.status(Response.Status.CREATED.getStatusCode(), "Consulta Created").build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Consulta obj){
-        Consulta tmp = rep.findById(Math.toIntExact(id));
-        tmp.setConcepto_cons(obj.getConcepto_cons());
-        tmp.setFecha_cons(obj.getFecha_cons());
-        tmp.setId_medico_cons(obj.getId_medico_cons());
-        tmp.setId_paciente_cons(obj.getId_paciente_cons());
+    public Response update(@PathParam("id") Long id, Derivacion obj){
+        Derivacion tmp = rep.findById(Math.toIntExact(id));
+        tmp.setDescripcion_deri(obj.getDescripcion_deri());
+        tmp.setFecha_deri(obj.getFecha_deri());
+        tmp.setId_med_deri(obj.getId_med_deri());
+        tmp.setId_usuario_deri(obj.getId_usuario_deri());
         return Response.ok().build();
     }
 

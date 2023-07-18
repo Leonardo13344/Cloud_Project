@@ -1,27 +1,30 @@
 package com.distribuida.rest;
 
-import com.distribuida.db.Consulta;
-import com.distribuida.rep.ConsultaRepository;
+
+
+
+
+import com.distribuida.db.Historial;
+import com.distribuida.rep.HistorialRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
-
-import java.util.List;
-
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/consultas")
+import java.util.List;
+
+@Path("/historial")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
-public class ConsultaRest {
+public class HistorialRest {
 
     @Inject
-    ConsultaRepository rep;
+    HistorialRepository rep;
 
     @GET
-    public List<Consulta> findAll(){
+    public List<Historial> findAll(){
         return rep.findAll().list();
     }
 
@@ -36,19 +39,17 @@ public class ConsultaRest {
     }
 
     @POST
-    public Response create(Consulta entity){
+    public Response create(Historial entity){
         rep.persist(entity);
         return Response.status(Response.Status.CREATED.getStatusCode(), "Consulta Created").build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Consulta obj){
-        Consulta tmp = rep.findById(Math.toIntExact(id));
-        tmp.setConcepto_cons(obj.getConcepto_cons());
-        tmp.setFecha_cons(obj.getFecha_cons());
-        tmp.setId_medico_cons(obj.getId_medico_cons());
-        tmp.setId_paciente_cons(obj.getId_paciente_cons());
+    public Response update(@PathParam("id") Long id, Historial obj){
+        Historial tmp = rep.findById(Math.toIntExact(id));
+        tmp.setId_consulta_hist(obj.getId_consulta_hist());
+        tmp.setId_paciente_hist(obj.getId_consulta_hist());
         return Response.ok().build();
     }
 

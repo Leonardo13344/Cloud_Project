@@ -1,27 +1,31 @@
 package com.distribuida.rest;
 
-import com.distribuida.db.Consulta;
-import com.distribuida.rep.ConsultaRepository;
+
+
+
+
+
+import com.distribuida.db.Medico;
+import com.distribuida.rep.MedicoRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
-
-import java.util.List;
-
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/consultas")
+import java.util.List;
+
+@Path("/medicos")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
-public class ConsultaRest {
+public class MedicoRest {
 
     @Inject
-    ConsultaRepository rep;
+    MedicoRepository rep;
 
     @GET
-    public List<Consulta> findAll(){
+    public List<Medico> findAll(){
         return rep.findAll().list();
     }
 
@@ -36,19 +40,23 @@ public class ConsultaRest {
     }
 
     @POST
-    public Response create(Consulta entity){
+    public Response create(Medico entity){
         rep.persist(entity);
         return Response.status(Response.Status.CREATED.getStatusCode(), "Consulta Created").build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Consulta obj){
-        Consulta tmp = rep.findById(Math.toIntExact(id));
-        tmp.setConcepto_cons(obj.getConcepto_cons());
-        tmp.setFecha_cons(obj.getFecha_cons());
-        tmp.setId_medico_cons(obj.getId_medico_cons());
-        tmp.setId_paciente_cons(obj.getId_paciente_cons());
+    public Response update(@PathParam("id") Long id, Medico obj){
+        Medico tmp = rep.findById(Math.toIntExact(id));
+        tmp.setApellidos_medi(obj.getApellidos_medi());
+        tmp.setCorreo_medi(obj.getCorreo_medi());
+        tmp.setDireccion_medi(obj.getDireccion_medi());
+        tmp.setHospital_medi(obj.getHospital_medi());
+        tmp.setId_especialidad_medi(obj.getId_especialidad_medi());
+        tmp.setNombre_medi(obj.getNombre_medi());
+        tmp.setSalario_medi(obj.getSalario_medi());
+        tmp.setSupervisor_id_medi(obj.getSupervisor_id_medi());
         return Response.ok().build();
     }
 

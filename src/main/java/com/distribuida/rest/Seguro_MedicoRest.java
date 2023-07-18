@@ -1,27 +1,31 @@
 package com.distribuida.rest;
 
-import com.distribuida.db.Consulta;
-import com.distribuida.rep.ConsultaRepository;
+
+
+
+
+
+import com.distribuida.db.Seguro_Medico;
+import com.distribuida.rep.Seguro_MedicoRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
-
-import java.util.List;
-
 import jakarta.ws.rs.core.MediaType;
 import jakarta.ws.rs.core.Response;
 
-@Path("/consultas")
+import java.util.List;
+
+@Path("/segurosmedicos")
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
-public class ConsultaRest {
+public class Seguro_MedicoRest {
 
     @Inject
-    ConsultaRepository rep;
+    Seguro_MedicoRepository rep;
 
     @GET
-    public List<Consulta> findAll(){
+    public List<Seguro_Medico> findAll(){
         return rep.findAll().list();
     }
 
@@ -36,19 +40,22 @@ public class ConsultaRest {
     }
 
     @POST
-    public Response create(Consulta entity){
+    public Response create(Seguro_Medico entity){
         rep.persist(entity);
         return Response.status(Response.Status.CREATED.getStatusCode(), "Consulta Created").build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Consulta obj){
-        Consulta tmp = rep.findById(Math.toIntExact(id));
-        tmp.setConcepto_cons(obj.getConcepto_cons());
-        tmp.setFecha_cons(obj.getFecha_cons());
-        tmp.setId_medico_cons(obj.getId_medico_cons());
-        tmp.setId_paciente_cons(obj.getId_paciente_cons());
+    public Response update(@PathParam("id") Long id, Seguro_Medico obj){
+        Seguro_Medico tmp = rep.findById(Math.toIntExact(id));
+        tmp.setCompania_segmed(obj.getCompania_segmed());
+        tmp.setFecha_segmed(obj.getFecha_segmed());
+        tmp.setId_paciente_segmed(obj.getId_paciente_segmed());
+        tmp.setNombre_segmed(obj.getNombre_segmed());
+        tmp.setNum_poliza_segmed(obj.getNum_poliza_segmed());
+        tmp.setPorc_cobert_segmed(obj.getPorc_cobert_segmed());
+        tmp.setTipo_segmed(obj.getTipo_segmed());
         return Response.ok().build();
     }
 
