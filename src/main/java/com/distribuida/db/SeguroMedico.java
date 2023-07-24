@@ -6,7 +6,7 @@ import java.util.Date;
 
 @Entity
 @Table(name = "seguros_medicos")
-public class Seguro_Medico {
+public class SeguroMedico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)

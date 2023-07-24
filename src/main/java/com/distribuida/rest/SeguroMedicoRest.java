@@ -5,8 +5,8 @@ package com.distribuida.rest;
 
 
 
-import com.distribuida.db.Seguro_Medico;
-import com.distribuida.rep.Seguro_MedicoRepository;
+import com.distribuida.db.SeguroMedico;
+import com.distribuida.rep.SeguroMedicoRepository;
 import jakarta.inject.Inject;
 import jakarta.transaction.Transactional;
 import jakarta.ws.rs.*;
@@ -19,13 +19,13 @@ import java.util.List;
 @Produces(MediaType.APPLICATION_JSON)
 @Consumes(MediaType.APPLICATION_JSON)
 @Transactional
-public class Seguro_MedicoRest {
+public class SeguroMedicoRest {
 
     @Inject
-    Seguro_MedicoRepository rep;
+    SeguroMedicoRepository rep;
 
     @GET
-    public List<Seguro_Medico> findAll(){
+    public List<SeguroMedico> findAll(){
         return rep.findAll().list();
     }
 
@@ -40,15 +40,15 @@ public class Seguro_MedicoRest {
     }
 
     @POST
-    public Response create(Seguro_Medico entity){
+    public Response create(SeguroMedico entity){
         rep.persist(entity);
         return Response.status(Response.Status.CREATED.getStatusCode(), "Consulta Created").build();
     }
 
     @PUT
     @Path("/{id}")
-    public Response update(@PathParam("id") Long id, Seguro_Medico obj){
-        Seguro_Medico tmp = rep.findById(Math.toIntExact(id));
+    public Response update(@PathParam("id") Long id, SeguroMedico obj){
+        SeguroMedico tmp = rep.findById(Math.toIntExact(id));
         tmp.setCompania_segmed(obj.getCompania_segmed());
         tmp.setFecha_segmed(obj.getFecha_segmed());
         tmp.setId_paciente_segmed(obj.getId_paciente_segmed());
