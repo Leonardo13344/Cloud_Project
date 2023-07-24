@@ -1,6 +1,6 @@
 services:
-  books-service:
-    image: okteto.dev/app-books:1.0.0
+  cloud-service:
+    image: okteto.dev/app-cloud:1.0.0
     expose:
       - 8080
     ports:
