@@ -6,4 +6,8 @@ import jakarta.enterprise.context.ApplicationScoped;
 
 @ApplicationScoped
 public class PacienteRepository implements PanacheRepositoryBase<Paciente, Integer> {
+
+    public Paciente findByCedula(String cedula){
+        return find("cedula_pac", cedula).firstResult();
+    }
 }

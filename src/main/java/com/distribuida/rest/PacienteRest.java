@@ -68,7 +68,13 @@ public class PacienteRest {
         rep.deleteById(Math.toIntExact(id));
     }
 
-//    public Response getByCedula(@PathParam("cedula") String cedula){
-//
-//    }
+    @GET
+    @Path("/C/{cedula}")
+    public Response findByCedula(@PathParam("cedula") String cedula){
+        var obj = rep.findByCedula(cedula);
+        if(obj == null){
+            return Response.status(Response.Status.NOT_FOUND).build();
+        }
+        return Response.ok(obj).build();
+    }
 }
