@@ -10,18 +10,19 @@ public class Derivacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_derivacion")
     private Integer id_deri;
 
-    @Column
+    @Column(name = "id_usuario_derivacion")
     private String id_usuario_deri;
 
-    @Column
+    @Column(name = "descripcion_derivacion")
     private String descripcion_deri;
 
-    @Column
+    @Column(name = "fecha_derivacion")
     private Date fecha_deri;
 
-    @Column
+    @Column(name = "id_med_derivacion")
     private Integer id_med_deri;
 
     public Integer getId_deri() {

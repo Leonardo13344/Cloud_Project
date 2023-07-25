@@ -8,15 +8,16 @@ public class Especialidad {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_especialidad")
     private Integer id_espe;
 
-    @Column
+    @Column(name = "encargado_especialidad")
     private String encargado_espe;
 
-    @Column
+    @Column(name = "descripcion_especialidad")
     private String descripcion_espe;
 
-    @Column
+    @Column(name = "id_departamento")
     private Integer id_departamento_espe;
 
     public Integer getId_espe() {

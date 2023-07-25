@@ -8,27 +8,28 @@ public class Receta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_receta")
     private Integer id_rece;
 
-    @Column
+    @Column(name = "duracion_dias_receta")
     private Integer duracionD_rece;
 
-    @Column
+    @Column(name = "duracion_meses_receta")
     private Integer duracionM_rece;
 
-    @Column
+    @Column(name = "duracion_anios_receta")
     private Integer duracionA_rece;
 
-    @Column
+    @Column(name = "comentarios_receta")
     private String comentarios_rece;
 
-    @Column
+    @Column(name = "motivos_receta")
     private String motivos_rece;
 
-    @Column
+    @Column(name = "via_administracion_receta")
     private String via_administracion_rece;
 
-    @Column
+    @Column(name = "id_consulta")
     private Integer id_consulta_rece;
 
     public Integer getId_rece() {

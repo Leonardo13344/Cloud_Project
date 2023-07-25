@@ -6,17 +6,18 @@ import jakarta.persistence.*;
 @Table(name = "departamentos")
 public class Departamento {
 
-    @Id
+    @Id()
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_depart")
     private Integer id_depa;
 
-    @Column
+    @Column(name = "num_empl_depart")
     private Integer num_empl_depa;
 
-    @Column
+    @Column(name = "encargado_id_depart")
     private String encargado_id_dep;
 
-    @Column
+    @Column(name = "oficina_depart")
     private String oficina_depa;
 
     public Integer getId_depa() {

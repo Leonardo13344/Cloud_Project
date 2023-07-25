@@ -8,18 +8,19 @@ public class Indumentaria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_indumentaria")
     private Integer id_indu;
 
-    @Column
+    @Column(name = "concepto_indumentaria")
     private String concepto_indu;
 
-    @Column
+    @Column(name = "ubicacion_indumentaria")
     private String ubicacion_indu;
 
-    @Column
+    @Column(name = "area_indumentaria")
     private String area_indu;
 
-    @Column
+    @Column(name = "id_laboratorio")
     private String id_laboratorio_indu;
 
     public Integer getId_indu() {

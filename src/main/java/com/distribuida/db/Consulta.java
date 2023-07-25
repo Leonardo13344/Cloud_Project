@@ -10,18 +10,19 @@ public class Consulta {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_consulta")
     private Integer id_cons;
 
-    @Column
+    @Column(name = "concepto_consulta")
     private String concepto_cons;
 
-    @Column
+    @Column(name = "id_paciente")
     private Integer id_paciente_cons;
 
-    @Column
+    @Column(name = "id_medico")
     private Integer id_medico_cons;
 
-    @Column
+    @Column(name = "fecha_consulta")
     private Date fecha_cons;
 
     public Integer getId_cons() {

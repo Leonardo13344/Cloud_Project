@@ -8,15 +8,16 @@ public class Personal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_personal")
     private Integer id_pers;
 
-    @Column
+    @Column(name = "id_depart")
     private Integer id_departamento_pers;
 
-    @Column
+    @Column(name = "encargado_personal")
     private String encargado_pers;
 
-    @Column
+    @Column(name = "horario_personal")
     private String horario_pers;
 
     public Integer getId_pers() {

@@ -10,24 +10,25 @@ public class Laboratorio {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_laboratorio")
     private Integer id_labo;
 
-    @Column
+    @Column(name = "nombre_pac_lab")
     private String nombre_pac_labo;
 
-    @Column
+    @Column(name = "med_solicitante_lab")
     private String med_solicitante_labo;
 
-    @Column
+    @Column(name = "fecha_lab")
     private Date fecha_labo;
 
-    @Column
+    @Column(name = "tipo_prueba_lab")
     private String tipo_prueba_labo;
 
-    @Column
+    @Column(name = "observaciones_lab")
     private String observaciones_labo;
 
-    @Column
+    @Column(name = "encargado_lab")
     private Integer id_personal_labo;
 
     public Integer getId_labo() {

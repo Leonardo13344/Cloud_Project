@@ -10,18 +10,19 @@ public class Hospitalizacion {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_hosp")
     private Integer id_hosp;
 
-    @Column
+    @Column(name = "fecha_inic_hosp")
     private Date fecha_inic_hosp;
 
-    @Column
+    @Column(name = "fecha_fin_hosp")
     private Date fecha_fin_hosp;
 
-    @Column
+    @Column(name = "personal_encarg_hosp")
     private Integer personal_encarg_hosp;
 
-    @Column
+    @Column(name = "descripcion_hosp")
     private String descripcion_hosp;
 
     public Integer getId_hosp() {

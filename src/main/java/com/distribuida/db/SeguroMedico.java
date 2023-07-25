@@ -10,27 +10,28 @@ public class SeguroMedico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_segmed")
     private Integer id_segmed;
 
-    @Column
+    @Column(name = "nombre_segmed")
     private String nombre_segmed;
 
-    @Column
+    @Column(name = "num_poliza_segmed")
     private String num_poliza_segmed;
 
-    @Column
+    @Column(name = "compania_segmed")
     private String compania_segmed;
 
-    @Column
+    @Column(name = "fecha_vence_segmed")
     private Date fecha_segmed;
 
-    @Column
+    @Column(name = "tipo_segmed")
     private String tipo_segmed;
 
-    @Column
+    @Column(name = "porc_cobert_segmed")
     private Integer porc_cobert_segmed;
 
-    @Column
+    @Column(name = "id_paciente")
     private Integer id_paciente_segmed;
 
     public Integer getId_segmed() {

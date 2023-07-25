@@ -8,24 +8,25 @@ public class Factura {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_fact")
     private Integer id_fact;
 
-    @Column
+    @Column(name = "fecha_emision_fact")
     private String fecha_emision_fact;
 
-    @Column
+    @Column(name = "paciente_fact")
     private String paciente_fact;
 
-    @Column
+    @Column(name = "descripcion_fact")
     private String descripcion_fact;
 
-    @Column
+    @Column(name = "monto_fact")
     private String monto_fact;
 
-    @Column
+    @Column(name = "metodo_pago_fact")
     private String metodo_pago_fact;
 
-    @Column
+    @Column(name = "id_receta")
     private Integer id_receta_fact;
 
     public Integer getId_fact() {

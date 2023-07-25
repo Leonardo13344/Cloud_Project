@@ -12,34 +12,34 @@ public class Paciente {
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
     private Integer id_pac;
 
-    @Column
+    @Column(name = "cedula_pac")
     private String cedula_pac;
 
-    @Column
+    @Column(name = "nombre_pac")
     private String nombre_pac;
 
-    @Column
+    @Column(name = "apellido_paterno_pac")
     private String apellido_paterno_pac;
 
-    @Column
+    @Column(name = "apellido_materno_pac")
     private String apellido_materno_pac;
 
-    @Column
+    @Column(name = "sexo_pac")
     private Integer sexo_pac;
 
-    @Column
+    @Column(name = "fecha_nac_pac")
     private Date fecha_nac_pac;
 
-    @Column
+    @Column(name = "domicilio_pac")
     private String domicilio_pac;
 
-    @Column
+    @Column(name = "telefono_pac")
     private String telefono_pac;
 
-    @Column
+    @Column(name = "num_expediente_pac")
     private String num_expediente_pac;
 
-    @Column
+    @Column(name = "id_hospitalario_pac")
     private String id_hospitalario_pac;
 
     public Integer getId_pac() {

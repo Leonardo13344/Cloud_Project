@@ -67,4 +67,8 @@ public class PacienteRest {
     public void delete(@PathParam("id") Long id){
         rep.deleteById(Math.toIntExact(id));
     }
+
+//    public Response getByCedula(@PathParam("cedula") String cedula){
+//
+//    }
 }

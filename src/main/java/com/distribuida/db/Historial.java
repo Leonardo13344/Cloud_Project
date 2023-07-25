@@ -8,12 +8,13 @@ public class Historial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_historial")
     private Integer id_hist;
 
-    @Column
+    @Column(name = "id_consulta")
     private Integer id_consulta_hist;
 
-    @Column
+    @Column(name = "id_paciente")
     private Integer id_paciente_hist;
 
     public Integer getId_hist() {

@@ -8,15 +8,16 @@ public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_proveedor")
     private Integer id_prov;
 
-    @Column
+    @Column(name = "direccion_proveedor")
     private String direccion_prov;
 
-    @Column
+    @Column(name = "telefono_proveedor")
     private String telefono_prov;
 
-    @Column
+    @Column(name = "descuento_proveedor")
     private Integer descuento_prov;
 
     public Integer getId_prov() {

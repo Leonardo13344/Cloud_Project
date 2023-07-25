@@ -8,21 +8,22 @@ public class Medicina {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @Column(name = "id_medicina")
     private Integer id_medi;
 
-    @Column
+    @Column(name = "componentes_medicina")
     private String componentes_medi;
 
-    @Column
+    @Column(name = "disponibilidad_medicina")
     private Boolean disponibilidad_medi;
 
-    @Column
+    @Column(name = "cantidad_medicina")
     private Integer cantidad_medi;
 
-    @Column
+    @Column(name = "id_proveedor")
     private Integer id_proveedor_medi;
 
-    @Column
+    @Column(name = "id_receta")
     private Integer id_receta_medi;
 
     public Integer getId_medi() {
