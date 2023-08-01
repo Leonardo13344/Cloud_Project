@@ -42,6 +42,9 @@ public class Paciente {
     @Column(name = "id_hospitalario_pac")
     private String id_hospitalario_pac;
 
+    @Column(name = "estado_pac")
+    private Boolean estado_pac;
+
     public Integer getId_pac() {
         return id_pac;
     }
@@ -130,6 +133,14 @@ public class Paciente {
         this.id_hospitalario_pac = id_hospitalario_pac;
     }
 
+    public Boolean getEstado_pac() {
+        return estado_pac;
+    }
+
+    public void setEstado_pac(Boolean estado_pac) {
+        this.estado_pac = estado_pac;
+    }
+
     @Override
     public String toString() {
         return "Paciente{" +
@@ -144,6 +155,7 @@ public class Paciente {
                 ", telefono_pac='" + telefono_pac + '\'' +
                 ", num_expediente_pac='" + num_expediente_pac + '\'' +
                 ", id_hospitalario_pac='" + id_hospitalario_pac + '\'' +
+                ", estado_pac=" + estado_pac +
                 '}';
     }
 }

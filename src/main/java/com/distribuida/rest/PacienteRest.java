@@ -59,6 +59,7 @@ public class PacienteRest {
         tmp.setNombre_pac(obj.getNombre_pac());
         tmp.setSexo_pac(obj.getSexo_pac());
         tmp.setTelefono_pac(obj.getTelefono_pac());
+        tmp.setEstado_pac(obj.getEstado_pac());
         return Response.ok().build();
     }
 
