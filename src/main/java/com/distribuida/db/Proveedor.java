@@ -20,6 +20,9 @@ public class Proveedor {
     @Column(name = "descuento_proveedor")
     private Integer descuento_prov;
 
+    @Column(name = "estado_proveedor")
+    private Boolean estado_prov;
+
     public Integer getId_prov() {
         return id_prov;
     }
@@ -52,6 +55,14 @@ public class Proveedor {
         this.descuento_prov = descuento_prov;
     }
 
+    public Boolean getEstado_prov() {
+        return estado_prov;
+    }
+
+    public void setEstado_prov(Boolean estado_prov) {
+        this.estado_prov = estado_prov;
+    }
+
     @Override
     public String toString() {
         return "Proveedor{" +
@@ -59,6 +70,7 @@ public class Proveedor {
                 ", direccion_prov='" + direccion_prov + '\'' +
                 ", telefono_prov='" + telefono_prov + '\'' +
                 ", descuento_prov=" + descuento_prov +
+                ", estado_prov=" + estado_prov +
                 '}';
     }
 }

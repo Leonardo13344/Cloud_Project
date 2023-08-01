@@ -55,6 +55,7 @@ public class FacturaRest {
         tmp.setMetodo_pago_fact(obj.getMetodo_pago_fact());
         tmp.setFecha_emision_fact(obj.getFecha_emision_fact());
         tmp.setPaciente_fact(obj.getPaciente_fact());
+        tmp.setEstado_fact(obj.getEstado_fact());
         return Response.ok().build();
     }
 

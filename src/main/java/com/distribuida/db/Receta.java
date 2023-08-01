@@ -32,6 +32,9 @@ public class Receta {
     @Column(name = "id_consulta")
     private Integer id_consulta_rece;
 
+    @Column(name = "estado_receta")
+    private Boolean estado_rece;
+
     public Integer getId_rece() {
         return id_rece;
     }
@@ -96,6 +99,14 @@ public class Receta {
         this.id_consulta_rece = id_consulta_rece;
     }
 
+    public Boolean getEstado_rece() {
+        return estado_rece;
+    }
+
+    public void setEstado_rece(Boolean estado_rece) {
+        this.estado_rece = estado_rece;
+    }
+
     @Override
     public String toString() {
         return "Receta{" +
@@ -107,6 +118,7 @@ public class Receta {
                 ", motivos_rece='" + motivos_rece + '\'' +
                 ", via_administracion_rece='" + via_administracion_rece + '\'' +
                 ", id_consulta_rece=" + id_consulta_rece +
+                ", estado_rece=" + estado_rece +
                 '}';
     }
 }

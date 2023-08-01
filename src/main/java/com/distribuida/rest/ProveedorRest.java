@@ -52,6 +52,7 @@ public class ProveedorRest {
         tmp.setDescuento_prov(obj.getDescuento_prov());
         tmp.setDireccion_prov(obj.getDireccion_prov());
         tmp.setTelefono_prov(obj.getTelefono_prov());
+        tmp.setEstado_prov(obj.getEstado_prov());
         return Response.ok().build();
     }
 

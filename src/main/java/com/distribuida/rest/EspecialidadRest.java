@@ -50,6 +50,7 @@ public class EspecialidadRest {
         tmp.setDescripcion_espe(obj.getDescripcion_espe());
         tmp.setEncargado_espe(obj.getEncargado_espe());
         tmp.setId_departamento_espe(obj.getId_departamento_espe());
+        tmp.setEstado_espe(obj.getEstado_espe());
         return Response.ok().build();
     }
 

@@ -50,6 +50,7 @@ public class HistorialRest {
         Historial tmp = rep.findById(Math.toIntExact(id));
         tmp.setId_consulta_hist(obj.getId_consulta_hist());
         tmp.setId_paciente_hist(obj.getId_consulta_hist());
+        tmp.setEstado_hist(obj.getEstado_hist());
         return Response.ok().build();
     }
 

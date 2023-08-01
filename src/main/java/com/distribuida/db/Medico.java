@@ -29,11 +29,14 @@ public class Medico {
     @Column(name = "correo_elect_medico")
     private String correo_medi;
 
-    @Column(name = "salario")
+    @Column(name = "salario_medico")
     private Double salario_medi;
 
     @Column(name = "supervisor_id")
     private Integer supervisor_id_medi;
+
+    @Column(name = "estado_medico")
+    private Boolean estado_medi;
 
     public Integer getId_medi() {
         return id_medi;
@@ -107,6 +110,14 @@ public class Medico {
         this.supervisor_id_medi = supervisor_id_medi;
     }
 
+    public Boolean getEstado_medi() {
+        return estado_medi;
+    }
+
+    public void setEstado_medi(Boolean estado_medi) {
+        this.estado_medi = estado_medi;
+    }
+
     @Override
     public String toString() {
         return "Medico{" +
@@ -119,6 +130,7 @@ public class Medico {
                 ", correo_medi='" + correo_medi + '\'' +
                 ", salario_medi=" + salario_medi +
                 ", supervisor_id_medi=" + supervisor_id_medi +
+                ", estado_medi=" + estado_medi +
                 '}';
     }
 }

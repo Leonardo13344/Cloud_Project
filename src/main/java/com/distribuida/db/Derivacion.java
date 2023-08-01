@@ -25,6 +25,9 @@ public class Derivacion {
     @Column(name = "id_med_derivacion")
     private Integer id_med_deri;
 
+    @Column(name = "estado_derivacion")
+    private Boolean estado_deri;
+
     public Integer getId_deri() {
         return id_deri;
     }
@@ -65,6 +68,14 @@ public class Derivacion {
         this.id_med_deri = id_med_deri;
     }
 
+    public Boolean getEstado_deri() {
+        return estado_deri;
+    }
+
+    public void setEstado_deri(Boolean estado_deri) {
+        this.estado_deri = estado_deri;
+    }
+
     @Override
     public String toString() {
         return "Derivacion{" +
@@ -73,6 +84,7 @@ public class Derivacion {
                 ", descripcion_deri='" + descripcion_deri + '\'' +
                 ", fecha_deri=" + fecha_deri +
                 ", id_med_deri=" + id_med_deri +
+                ", estado_deri=" + estado_deri +
                 '}';
     }
 }

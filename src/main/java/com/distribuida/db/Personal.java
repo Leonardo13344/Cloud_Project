@@ -20,6 +20,9 @@ public class Personal {
     @Column(name = "horario_personal")
     private String horario_pers;
 
+    @Column(name = "estado_personal")
+    private Boolean estado_pers;
+
     public Integer getId_pers() {
         return id_pers;
     }
@@ -52,6 +55,14 @@ public class Personal {
         this.horario_pers = horario_pers;
     }
 
+    public Boolean getEstado_pers() {
+        return estado_pers;
+    }
+
+    public void setEstado_pers(Boolean estado_pers) {
+        this.estado_pers = estado_pers;
+    }
+
     @Override
     public String toString() {
         return "Personal{" +
@@ -59,6 +70,7 @@ public class Personal {
                 ", id_departamento_pers=" + id_departamento_pers +
                 ", encargado_pers='" + encargado_pers + '\'' +
                 ", horario_pers='" + horario_pers + '\'' +
+                ", estado_pers=" + estado_pers +
                 '}';
     }
 }

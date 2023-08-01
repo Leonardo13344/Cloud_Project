@@ -53,6 +53,7 @@ public class MedicinaRest {
         tmp.setDisponibilidad_medi(obj.getDisponibilidad_medi());
         tmp.setId_receta_medi(obj.getId_receta_medi());
         tmp.setId_proveedor_medi(obj.getId_proveedor_medi());
+        tmp.setEstado_medi(obj.getEstado_medi());
         return Response.ok().build();
     }
 

@@ -25,6 +25,9 @@ public class Hospitalizacion {
     @Column(name = "descripcion_hosp")
     private String descripcion_hosp;
 
+    @Column(name = "estado_hosp")
+    private Boolean estado_hosp;
+
     public Integer getId_hosp() {
         return id_hosp;
     }
@@ -65,6 +68,14 @@ public class Hospitalizacion {
         this.descripcion_hosp = descripcion_hosp;
     }
 
+    public Boolean getEstado_hosp() {
+        return estado_hosp;
+    }
+
+    public void setEstado_hosp(Boolean estado_hosp) {
+        this.estado_hosp = estado_hosp;
+    }
+
     @Override
     public String toString() {
         return "Hospitalizacion{" +
@@ -73,6 +84,7 @@ public class Hospitalizacion {
                 ", fecha_fin_hosp=" + fecha_fin_hosp +
                 ", personal_encarg_hosp=" + personal_encarg_hosp +
                 ", descripcion_hosp='" + descripcion_hosp + '\'' +
+                ", estado_hosp=" + estado_hosp +
                 '}';
     }
 }

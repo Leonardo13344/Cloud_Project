@@ -26,6 +26,9 @@ public class Medicina {
     @Column(name = "id_receta")
     private Integer id_receta_medi;
 
+    @Column(name = "estado_medicina")
+    private Boolean estado_medi;
+
     public Integer getId_medi() {
         return id_medi;
     }
@@ -74,6 +77,14 @@ public class Medicina {
         this.id_receta_medi = id_receta_medi;
     }
 
+    public Boolean getEstado_medi() {
+        return estado_medi;
+    }
+
+    public void setEstado_medi(Boolean estado_medi) {
+        this.estado_medi = estado_medi;
+    }
+
     @Override
     public String toString() {
         return "Medicina{" +
@@ -83,6 +94,7 @@ public class Medicina {
                 ", cantidad_medi=" + cantidad_medi +
                 ", id_proveedor_medi=" + id_proveedor_medi +
                 ", id_receta_medi=" + id_receta_medi +
+                ", estado_medi=" + estado_medi +
                 '}';
     }
 }

@@ -55,6 +55,7 @@ public class LaboratorioRest {
         tmp.setNombre_pac_labo(obj.getNombre_pac_labo());
         tmp.setMed_solicitante_labo(obj.getMed_solicitante_labo());
         tmp.setTipo_prueba_labo(obj.getTipo_prueba_labo());
+        tmp.setEstado_labo(obj.getEstado_labo());
         return Response.ok().build();
     }
 

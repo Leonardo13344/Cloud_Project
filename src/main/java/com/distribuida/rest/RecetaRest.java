@@ -56,6 +56,7 @@ public class RecetaRest {
         tmp.setId_consulta_rece(obj.getId_consulta_rece());
         tmp.setMotivos_rece(obj.getMotivos_rece());
         tmp.setVia_administracion_rece(obj.getVia_administracion_rece());
+        tmp.setEstado_rece(obj.getEstado_rece());
         return Response.ok().build();
     }
 

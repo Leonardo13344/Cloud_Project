@@ -52,6 +52,7 @@ public class PersonalRest {
         tmp.setEncargado_pers(obj.getEncargado_pers());
         tmp.setHorario_pers(obj.getHorario_pers());
         tmp.setId_departamento_pers(obj.getId_departamento_pers());
+        tmp.setEstado_pers(obj.getEstado_pers());
         return Response.ok().build();
     }
 

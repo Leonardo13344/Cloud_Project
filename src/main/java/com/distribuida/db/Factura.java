@@ -29,6 +29,9 @@ public class Factura {
     @Column(name = "id_receta")
     private Integer id_receta_fact;
 
+    @Column(name = "estado_fact")
+    private Boolean estado_fact;
+
     public Integer getId_fact() {
         return id_fact;
     }
@@ -85,6 +88,14 @@ public class Factura {
         this.id_receta_fact = id_receta_fact;
     }
 
+    public Boolean getEstado_fact() {
+        return estado_fact;
+    }
+
+    public void setEstado_fact(Boolean estado_fact) {
+        this.estado_fact = estado_fact;
+    }
+
     @Override
     public String toString() {
         return "Factura{" +
@@ -95,6 +106,7 @@ public class Factura {
                 ", monto_fact='" + monto_fact + '\'' +
                 ", metodo_pago_fact='" + metodo_pago_fact + '\'' +
                 ", id_receta_fact=" + id_receta_fact +
+                ", estado_fact=" + estado_fact +
                 '}';
     }
 }

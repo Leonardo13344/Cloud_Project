@@ -47,6 +47,7 @@ public class ConsultaRest {
         tmp.setFecha_cons(obj.getFecha_cons());
         tmp.setId_medico_cons(obj.getId_medico_cons());
         tmp.setId_paciente_cons(obj.getId_paciente_cons());
+        tmp.setEstado_cons(obj.getEstado_cons());
         return Response.ok().build();
     }
 

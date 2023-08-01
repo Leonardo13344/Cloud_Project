@@ -23,6 +23,9 @@ public class Indumentaria {
     @Column(name = "id_laboratorio")
     private String id_laboratorio_indu;
 
+    @Column(name = "estado_indumentaria")
+    private Boolean estado_indu;
+
     public Integer getId_indu() {
         return id_indu;
     }
@@ -63,6 +66,14 @@ public class Indumentaria {
         this.id_laboratorio_indu = id_laboratorio_indu;
     }
 
+    public Boolean getEstado_indu() {
+        return estado_indu;
+    }
+
+    public void setEstado_indu(Boolean estado_indu) {
+        this.estado_indu = estado_indu;
+    }
+
     @Override
     public String toString() {
         return "Indumentaria{" +
@@ -71,6 +82,7 @@ public class Indumentaria {
                 ", ubicacion_indu='" + ubicacion_indu + '\'' +
                 ", area_indu='" + area_indu + '\'' +
                 ", id_laboratorio_indu='" + id_laboratorio_indu + '\'' +
+                ", estado_indu=" + estado_indu +
                 '}';
     }
 }

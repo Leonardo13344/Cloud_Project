@@ -25,6 +25,9 @@ public class Consulta {
     @Column(name = "fecha_consulta")
     private Date fecha_cons;
 
+    @Column(name = "estado_cons")
+    private Boolean estado_cons;
+
     public Integer getId_cons() {
         return id_cons;
     }
@@ -65,6 +68,14 @@ public class Consulta {
         this.fecha_cons = fecha_cons;
     }
 
+    public Boolean getEstado_cons() {
+        return estado_cons;
+    }
+
+    public void setEstado_cons(Boolean estado_cons) {
+        this.estado_cons = estado_cons;
+    }
+
     @Override
     public String toString() {
         return "Consulta{" +
@@ -73,6 +84,7 @@ public class Consulta {
                 ", id_paciente_cons=" + id_paciente_cons +
                 ", id_medico_cons=" + id_medico_cons +
                 ", fecha_cons=" + fecha_cons +
+                ", estado_cons=" + estado_cons +
                 '}';
     }
 }

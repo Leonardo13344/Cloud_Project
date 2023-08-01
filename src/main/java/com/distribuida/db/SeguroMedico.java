@@ -34,6 +34,9 @@ public class SeguroMedico {
     @Column(name = "id_paciente")
     private Integer id_paciente_segmed;
 
+    @Column(name = "estado_segmed")
+    private Boolean estado_segmed;
+
     public Integer getId_segmed() {
         return id_segmed;
     }
@@ -98,9 +101,17 @@ public class SeguroMedico {
         this.id_paciente_segmed = id_paciente_segmed;
     }
 
+    public Boolean getEstado_segmed() {
+        return estado_segmed;
+    }
+
+    public void setEstado_segmed(Boolean estado_segmed) {
+        this.estado_segmed = estado_segmed;
+    }
+
     @Override
     public String toString() {
-        return "Seguro_Medico{" +
+        return "SeguroMedico{" +
                 "id_segmed=" + id_segmed +
                 ", nombre_segmed='" + nombre_segmed + '\'' +
                 ", num_poliza_segmed='" + num_poliza_segmed + '\'' +
@@ -109,6 +120,7 @@ public class SeguroMedico {
                 ", tipo_segmed='" + tipo_segmed + '\'' +
                 ", porc_cobert_segmed=" + porc_cobert_segmed +
                 ", id_paciente_segmed=" + id_paciente_segmed +
+                ", estado_segmed=" + estado_segmed +
                 '}';
     }
 }

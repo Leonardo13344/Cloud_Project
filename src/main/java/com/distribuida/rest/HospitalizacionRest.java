@@ -53,6 +53,7 @@ public class HospitalizacionRest {
         tmp.setFecha_fin_hosp(obj.getFecha_fin_hosp());
         tmp.setFecha_inic_hosp(obj.getFecha_inic_hosp());
         tmp.setPersonal_encarg_hosp(obj.getPersonal_encarg_hosp());
+        tmp.setEstado_hosp(obj.getEstado_hosp());
         return Response.ok().build();
     }
 

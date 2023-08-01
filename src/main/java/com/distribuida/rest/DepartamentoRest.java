@@ -48,6 +48,7 @@ public class DepartamentoRest {
         tmp.setEncargado_id_dep(obj.getEncargado_id_dep());
         tmp.setNum_empl_depa(obj.getNum_empl_depa());
         tmp.setOficina_depa(obj.getOficina_depa());
+        tmp.setEstado_depart(obj.getEstado_depart());
         return Response.ok().build();
     }
 

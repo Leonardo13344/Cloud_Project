@@ -50,6 +50,7 @@ public class DerivacionRest {
         tmp.setFecha_deri(obj.getFecha_deri());
         tmp.setId_med_deri(obj.getId_med_deri());
         tmp.setId_usuario_deri(obj.getId_usuario_deri());
+        tmp.setEstado_deri(obj.getEstado_deri());
         return Response.ok().build();
     }
 

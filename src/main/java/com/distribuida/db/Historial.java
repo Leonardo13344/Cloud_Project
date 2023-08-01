@@ -17,6 +17,9 @@ public class Historial {
     @Column(name = "id_paciente")
     private Integer id_paciente_hist;
 
+    @Column(name = "estado_historial")
+    private Boolean estado_hist;
+
     public Integer getId_hist() {
         return id_hist;
     }
@@ -41,12 +44,21 @@ public class Historial {
         this.id_paciente_hist = id_paciente_hist;
     }
 
+    public Boolean getEstado_hist() {
+        return estado_hist;
+    }
+
+    public void setEstado_hist(Boolean estado_hist) {
+        this.estado_hist = estado_hist;
+    }
+
     @Override
     public String toString() {
         return "Historial{" +
                 "id_hist=" + id_hist +
                 ", id_consulta_hist=" + id_consulta_hist +
                 ", id_paciente_hist=" + id_paciente_hist +
+                ", estado_hist=" + estado_hist +
                 '}';
     }
 }

@@ -20,6 +20,9 @@ public class Departamento {
     @Column(name = "oficina_depart")
     private String oficina_depa;
 
+    @Column(name = "estado_depart")
+    private Boolean estado_depart;
+
     public Integer getId_depa() {
         return id_depa;
     }
@@ -52,6 +55,14 @@ public class Departamento {
         this.oficina_depa = oficina_depa;
     }
 
+    public Boolean getEstado_depart() {
+        return estado_depart;
+    }
+
+    public void setEstado_depart(Boolean estado_depart) {
+        this.estado_depart = estado_depart;
+    }
+
     @Override
     public String toString() {
         return "Departamento{" +
@@ -59,6 +70,7 @@ public class Departamento {
                 ", num_empl_depa=" + num_empl_depa +
                 ", encargado_id_dep='" + encargado_id_dep + '\'' +
                 ", oficina_depa='" + oficina_depa + '\'' +
+                ", estado_depart=" + estado_depart +
                 '}';
     }
 }

@@ -57,6 +57,7 @@ public class MedicoRest {
         tmp.setNombre_medi(obj.getNombre_medi());
         tmp.setSalario_medi(obj.getSalario_medi());
         tmp.setSupervisor_id_medi(obj.getSupervisor_id_medi());
+        tmp.setEstado_medi(obj.getEstado_medi());
         return Response.ok().build();
     }
 

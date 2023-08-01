@@ -31,6 +31,9 @@ public class Laboratorio {
     @Column(name = "encargado_lab")
     private Integer id_personal_labo;
 
+    @Column(name = "estado_lab")
+    private Boolean estado_labo;
+
     public Integer getId_labo() {
         return id_labo;
     }
@@ -87,6 +90,14 @@ public class Laboratorio {
         this.id_personal_labo = id_personal_labo;
     }
 
+    public Boolean getEstado_labo() {
+        return estado_labo;
+    }
+
+    public void setEstado_labo(Boolean estado_labo) {
+        this.estado_labo = estado_labo;
+    }
+
     @Override
     public String toString() {
         return "Laboratorio{" +
@@ -97,6 +108,7 @@ public class Laboratorio {
                 ", tipo_prueba_labo='" + tipo_prueba_labo + '\'' +
                 ", observaciones_labo='" + observaciones_labo + '\'' +
                 ", id_personal_labo=" + id_personal_labo +
+                ", estado_labo=" + estado_labo +
                 '}';
     }
 }

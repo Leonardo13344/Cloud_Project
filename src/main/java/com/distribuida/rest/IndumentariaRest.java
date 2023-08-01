@@ -52,6 +52,7 @@ public class IndumentariaRest {
         tmp.setConcepto_indu(obj.getConcepto_indu());
         tmp.setUbicacion_indu(obj.getUbicacion_indu());
         tmp.setId_laboratorio_indu(obj.getId_laboratorio_indu());
+        tmp.setEstado_indu(obj.getEstado_indu());
         return Response.ok().build();
     }
 

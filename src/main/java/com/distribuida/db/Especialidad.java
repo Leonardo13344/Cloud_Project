@@ -20,6 +20,9 @@ public class Especialidad {
     @Column(name = "id_departamento")
     private Integer id_departamento_espe;
 
+    @Column(name = "estado_especialidad")
+    private Boolean estado_espe;
+
     public Integer getId_espe() {
         return id_espe;
     }
@@ -52,6 +55,14 @@ public class Especialidad {
         this.id_departamento_espe = id_departamento_espe;
     }
 
+    public Boolean getEstado_espe() {
+        return estado_espe;
+    }
+
+    public void setEstado_espe(Boolean estado_espe) {
+        this.estado_espe = estado_espe;
+    }
+
     @Override
     public String toString() {
         return "Especialidad{" +
@@ -59,6 +70,7 @@ public class Especialidad {
                 ", encargado_espe='" + encargado_espe + '\'' +
                 ", descripcion_espe='" + descripcion_espe + '\'' +
                 ", id_departamento_espe=" + id_departamento_espe +
+                ", estado_espe=" + estado_espe +
                 '}';
     }
 }

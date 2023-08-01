@@ -56,6 +56,7 @@ public class SeguroMedicoRest {
         tmp.setNum_poliza_segmed(obj.getNum_poliza_segmed());
         tmp.setPorc_cobert_segmed(obj.getPorc_cobert_segmed());
         tmp.setTipo_segmed(obj.getTipo_segmed());
+        tmp.setEstado_segmed(obj.getEstado_segmed());
         return Response.ok().build();
     }
 
