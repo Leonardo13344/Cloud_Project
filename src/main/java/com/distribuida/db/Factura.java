@@ -26,7 +26,7 @@ public class Factura {
     @Column(name = "metodo_pago_fact")
     private String metodo_pago_fact;
 
-    @Column(name = "id_receta")
+    @Column(name = "id_receta_fact")
     private Integer id_receta_fact;
 
     @Column(name = "estado_fact")

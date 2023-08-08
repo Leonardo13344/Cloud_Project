@@ -8,19 +8,19 @@ public class Proveedor {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_proveedor")
+    @Column(name = "id_prov")
     private Integer id_prov;
 
-    @Column(name = "direccion_proveedor")
+    @Column(name = "direccion_prov")
     private String direccion_prov;
 
-    @Column(name = "telefono_proveedor")
+    @Column(name = "telefono_prov")
     private String telefono_prov;
 
-    @Column(name = "descuento_proveedor")
+    @Column(name = "descuento_prov")
     private Integer descuento_prov;
 
-    @Column(name = "estado_proveedor")
+    @Column(name = "estado_prov")
     private Boolean estado_prov;
 
     public Integer getId_prov() {

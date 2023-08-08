@@ -8,19 +8,19 @@ public class Personal {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_personal")
+    @Column(name = "id_pers")
     private Integer id_pers;
 
-    @Column(name = "id_depart")
+    @Column(name = "id_departamento_pers")
     private Integer id_departamento_pers;
 
-    @Column(name = "encargado_personal")
+    @Column(name = "encargado_pers")
     private String encargado_pers;
 
-    @Column(name = "horario_personal")
+    @Column(name = "horario_pers")
     private String horario_pers;
 
-    @Column(name = "estado_personal")
+    @Column(name = "estado_pers")
     private Boolean estado_pers;
 
     public Integer getId_pers() {

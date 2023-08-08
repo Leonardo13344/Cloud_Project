@@ -8,16 +8,16 @@ public class Departamento {
 
     @Id()
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_depart")
+    @Column(name = "id_depa")
     private Integer id_depa;
 
-    @Column(name = "num_empl_depart")
+    @Column(name = "num_empl_depa")
     private Integer num_empl_depa;
 
-    @Column(name = "encargado_id_depart")
+    @Column(name = "encargado_id_dep")
     private String encargado_id_dep;
 
-    @Column(name = "oficina_depart")
+    @Column(name = "oficina_depa")
     private String oficina_depa;
 
     @Column(name = "estado_depart")

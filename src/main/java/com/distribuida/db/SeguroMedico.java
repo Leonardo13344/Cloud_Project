@@ -22,7 +22,7 @@ public class SeguroMedico {
     @Column(name = "compania_segmed")
     private String compania_segmed;
 
-    @Column(name = "fecha_vence_segmed")
+    @Column(name = "fecha_segmed")
     private Date fecha_segmed;
 
     @Column(name = "tipo_segmed")
@@ -31,7 +31,7 @@ public class SeguroMedico {
     @Column(name = "porc_cobert_segmed")
     private Integer porc_cobert_segmed;
 
-    @Column(name = "id_paciente")
+    @Column(name = "id_paciente_segmed")
     private Integer id_paciente_segmed;
 
     @Column(name = "estado_segmed")

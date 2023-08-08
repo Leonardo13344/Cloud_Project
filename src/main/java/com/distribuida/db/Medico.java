@@ -8,34 +8,34 @@ public class Medico {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_medico")
+    @Column(name = "id_medi")
     private Integer id_medi;
 
-    @Column(name = "nombre_medico")
+    @Column(name = "nombre_medi")
     private String nombre_medi;
 
-    @Column(name = "id_especialidad_medico")
+    @Column(name = "id_especialidad_medi")
     private Integer id_especialidad_medi;
 
-    @Column(name = "hospital_medico")
+    @Column(name = "hospital_medi")
     private String hospital_medi;
 
-    @Column(name = "direccion_medico")
+    @Column(name = "direccion_medi")
     private String direccion_medi;
 
-    @Column(name = "apellidos_medico")
+    @Column(name = "apellidos_medi")
     private String apellidos_medi;
 
-    @Column(name = "correo_elect_medico")
+    @Column(name = "correo_medi")
     private String correo_medi;
 
-    @Column(name = "salario_medico")
+    @Column(name = "salario_medi")
     private Double salario_medi;
 
-    @Column(name = "supervisor_id")
+    @Column(name = "supervisor_id_medi")
     private Integer supervisor_id_medi;
 
-    @Column(name = "estado_medico")
+    @Column(name = "estado_medi")
     private Boolean estado_medi;
 
     public Integer getId_medi() {

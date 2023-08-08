@@ -8,22 +8,22 @@ public class Indumentaria {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_indumentaria")
+    @Column(name = "id_indu")
     private Integer id_indu;
 
-    @Column(name = "concepto_indumentaria")
+    @Column(name = "concepto_indu")
     private String concepto_indu;
 
-    @Column(name = "ubicacion_indumentaria")
+    @Column(name = "ubicacion_indu")
     private String ubicacion_indu;
 
-    @Column(name = "area_indumentaria")
+    @Column(name = "area_indu")
     private String area_indu;
 
-    @Column(name = "id_laboratorio")
+    @Column(name = "id_laboratorio_indu")
     private String id_laboratorio_indu;
 
-    @Column(name = "estado_indumentaria")
+    @Column(name = "estado_indu")
     private Boolean estado_indu;
 
     public Integer getId_indu() {

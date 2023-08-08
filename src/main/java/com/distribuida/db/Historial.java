@@ -8,16 +8,16 @@ public class Historial {
 
     @Id
     @GeneratedValue(strategy = GenerationType.SEQUENCE)
-    @Column(name = "id_historial")
+    @Column(name = "id_hist")
     private Integer id_hist;
 
-    @Column(name = "id_consulta")
+    @Column(name = "id_consulta_hist")
     private Integer id_consulta_hist;
 
-    @Column(name = "id_paciente")
+    @Column(name = "id_paciente_hist")
     private Integer id_paciente_hist;
 
-    @Column(name = "estado_historial")
+    @Column(name = "estado_hist")
     private Boolean estado_hist;
 
     public Integer getId_hist() {
