@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Proveedor {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_prov")
     private Integer id_prov;
 

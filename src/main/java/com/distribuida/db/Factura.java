@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Factura {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_fact")
     private Integer id_fact;
 

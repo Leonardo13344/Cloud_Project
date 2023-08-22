@@ -9,7 +9,7 @@ import java.util.Date;
 public class Consulta {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_cons")
     private Integer id_cons;
 

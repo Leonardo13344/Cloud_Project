@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Receta {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_rece")
     private Integer id_rece;
 

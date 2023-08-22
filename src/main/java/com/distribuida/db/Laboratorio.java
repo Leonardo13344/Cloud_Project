@@ -9,7 +9,7 @@ import java.util.Date;
 public class Laboratorio {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_labo")
     private Integer id_labo;
 

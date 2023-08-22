@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Historial {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_hist")
     private Integer id_hist;
 

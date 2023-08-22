@@ -9,7 +9,7 @@ import java.util.Date;
 public class Hospitalizacion {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_hosp")
     private Integer id_hosp;
 

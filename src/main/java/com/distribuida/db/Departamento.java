@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Departamento {
 
     @Id()
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_depa")
     private Integer id_depa;
 

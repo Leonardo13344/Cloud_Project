@@ -9,7 +9,7 @@ import java.util.Date;
 public class Paciente {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id_pac;
 
     @Column(name = "cedula_pac")

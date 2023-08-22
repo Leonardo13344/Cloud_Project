@@ -9,7 +9,7 @@ import java.util.Date;
 public class SeguroMedico {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_segmed")
     private Integer id_segmed;
 

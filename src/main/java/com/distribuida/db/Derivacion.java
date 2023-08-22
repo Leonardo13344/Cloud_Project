@@ -9,7 +9,7 @@ import java.util.Date;
 public class Derivacion {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_deri")
     private Integer id_deri;
 

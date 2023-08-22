@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Medico {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_medi")
     private Integer id_medi;
 

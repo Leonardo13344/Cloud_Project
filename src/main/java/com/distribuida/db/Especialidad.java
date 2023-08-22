@@ -7,7 +7,7 @@ import jakarta.persistence.*;
 public class Especialidad {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.SEQUENCE)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     @Column(name = "id_espe")
     private Integer id_espe;
 
